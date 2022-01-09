@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+.navbar {
+    padding: .555rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left_nav, .right_nav {
+    display: flex;
+}
+
+.main_btn {
+    background-color: #af93ea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+}
+
+.other_btns {
+    background-color: #282a37;
+    display: flex;
+    overflow: auto;
+    margin-left: .555rem;
+    transition: 1.25s;
+}
+
+.other_btns a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    font-size: 1.15rem;
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Ubuntu', sans-serif;
+    cursor: pointer;
+}
+
+.other_btns .btn-primary:hover {
+    margin-top: -2px;
+    text-decoration: underline;
+    border-bottom: solid 2px #af93ea;
+    transition: .15s;
+}
+
+.other_btns .volume {
+    background-color: greenyellow;
+    transition: .25s linear;
+}
+
+.time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 35px;
+    font-size: 1.15rem;
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Ubuntu', sans-serif;
+    cursor: default;
+    transition: .25s linear;
+    
+}
+
+.gr {
+    background-color: greenyellow;
+    color: black;
+}
