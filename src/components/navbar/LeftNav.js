@@ -1,12 +1,12 @@
 import React from "react";
-import gridIcons from "../static/grid.png";
-import math from "../static/math.png";
-import settings from "../static/settings.png";
-import graph from "../static/graph.png";
-import chat from "../static/chat.png";
-import docs from "../static/docs.png";
-import volume from "../static/volume.png";
-import spotify from "../static/spotify2.png";
+import gridIcons from "../../static/grid.png";
+import math from "../../static/math.png";
+import settings from "../../static/settings.png";
+import graph from "../../static/graph.png";
+import chat from "../../static/chat.png";
+import docs from "../../static/docs.png";
+import volume from "../../static/volume.png";
+import spotify from "../../static/spotify2.png";
 
 const LeftNav = () => {
   return (

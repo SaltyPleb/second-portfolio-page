@@ -4,11 +4,15 @@ import logo from "../static/logo2.jpg";
 
 const Background = () => {
   return (
-    <div className="background">
-      <div className="main_backgroud" style={{ backgroundImage: `url(${logo})`}}> 
-      <Main/>
+
+      <div className="background">
+        <div
+          className="main_backgroud"
+          style={{ backgroundImage: `url(${logo})` }}
+        ></div>
       </div>
-    </div>
+     
+
   );
 };
 

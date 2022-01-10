@@ -1,5 +1,5 @@
 import "./style/style.css";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/navbar/Navbar";
 import Cat from "./components/cat/Cat";
 import Message from "./components/message/Message";
 

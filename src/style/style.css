@@ -3,6 +3,7 @@ html {
     height: 100%;
     width: 100%;
     margin: 0;
+    overflow: hidden;
 }
 
 .main_backgroud {
@@ -12,7 +13,9 @@ html {
 	background-size: cover;
   min-width: 100%;
   min-height: 100%;
-    
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+  z-index: -9999;
 }
 
 @media screen and (max-width: 1024px) {
