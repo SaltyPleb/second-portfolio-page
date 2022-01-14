@@ -18,7 +18,7 @@
     left: calc(50% - 10vw);
     top: calc(50% - 8vh);
     width: clamp(200px, 50%, 400px);
-    transition: .15s;
+    
 }
 
 @media screen and (max-width: 1024px) {
@@ -44,6 +44,7 @@
     text-align: left;
     font-size: 55px;
     height: 11px;
+    width: 65px;
     line-height: 30px;
     border-radius: 11px;
     background-color: #ece5ce;

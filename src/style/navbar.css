@@ -31,6 +31,7 @@
     overflow: auto;
     margin-left: .555rem;
     transition: 1.25s;
+    overflow: hidden;
 }
 
 .other_btns a, .btn-primary {
@@ -52,6 +53,18 @@
     text-decoration: underline;
     border-bottom: solid 2px #af93ea;
     transition: .15s;
+}
+
+.btn-primary:active {
+    filter: drop-shadow(0 0 0 rgb(48, 201, 99));
+    transition: filter 0s;
+    animation: icon-bubble 1s 1 backwards ease-in-out;
+}
+
+@keyframes icon-bubble {
+    50% {
+        transform: scale(1.2);
+    }
 }
 
 .other_btns .volume {
