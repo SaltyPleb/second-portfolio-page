@@ -29,7 +29,7 @@ const RightNav = () => {
           className="btn-primary"
           onClick={() => backgroundImage.setBackgroundImage(getImage())}
         >
-          <img src={layers} className="icon" />
+          <img src={layers} className="icon" alt="" />
         </div>
       </div>
       <div className="other_btns">
