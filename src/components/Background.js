@@ -1,5 +1,5 @@
 import { observer } from "mobx-react-lite";
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Context } from "..";
 
 const Background = observer(() => {
@@ -8,7 +8,7 @@ const Background = observer(() => {
   return (
       <div className="background">
         <div
-          className="main_backgroud"
+          className={`main_backgroud ${backgroundImage.bluredBackground ? "blured_backgroud" : ""}`}
           style={{ backgroundImage: `url(${backgroundImage.backgroundImage})` }}
         ></div>
       </div>

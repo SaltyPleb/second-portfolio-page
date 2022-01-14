@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import gridIcons from "../../static/grid.png";
 import math from "../../static/math.png";
 import settings from "../../static/settings.png";
@@ -7,11 +7,15 @@ import chat from "../../static/chat.png";
 import docs from "../../static/docs.png";
 import volume from "../../static/volume.png";
 import spotify from "../../static/spotify2.png";
+import { Context } from "../..";
 
 const LeftNav = () => {
+
+  const { backgroundImage } = useContext(Context)
+  
   return (
     <div className="left_nav">
-      <div className="main_btn">
+      <div className="main_btn" onClick={()=>{backgroundImage.setBluredBackground(!backgroundImage.bluredBackground)}}>
         <img className="icon" src={gridIcons} alt="" />
       </div>
 

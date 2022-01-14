@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Context } from "../..";
 import layers from "../../static/layers.png";
-import logo1 from "../../static/logo1.jpg";
-import logo2 from "../../static/logo2.jpg";
+import bg1 from "../../static/bg1.jpg";
+import bg2 from "../../static/bg2.jpg";
 
 const RightNav = () => {
-  const backgroundImages = [logo1, logo2];
+  const backgroundImages = [bg1, bg2];
 
   const { backgroundImage } = useContext(Context);
 
@@ -13,6 +13,7 @@ const RightNav = () => {
 
   const [dateState, setDateState] = useState(new Date());
   useEffect(() => {
+    backgroundImage.setBackgroundImage(getImage());
     setInterval(() => setDateState(new Date()), 100);
   }, []);
 
