@@ -33,7 +33,7 @@
     transition: 1.25s;
 }
 
-.other_btns a {
+.other_btns a, .btn-primary {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -44,6 +44,7 @@
     font-weight: bold;
     font-family: 'Ubuntu', sans-serif;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .other_btns .btn-primary:hover {

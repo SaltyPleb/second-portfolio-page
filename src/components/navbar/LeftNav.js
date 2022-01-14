@@ -16,31 +16,31 @@ const LeftNav = () => {
       </div>
 
       <div className="other_btns">
-        <a className="btn-primary">
+        <div className="btn-primary" href="#">
           <img className="icon" src={math} alt="" />
-        </a>
-        <a className="btn-primary">
+        </div>
+        <div className="btn-primary">
           <img className="icon" src={settings} alt="" />
-        </a>
-        <a className="btn-primary">
+        </div>
+        <div className="btn-primary">
           <img className="icon" src={graph} alt="" />
-        </a>
-        <a className="btn-primary">
+        </div>
+        <div className="btn-primary">
           <img className="icon" src={docs} alt="" />
-        </a>
-        <a className="btn-primary">
+        </div>
+        <div className="btn-primary">
           <img className="icon" src={chat} alt="" />
-        </a>
+        </div>
       </div>
 
       <div className="other_btns">
-        <a className="volume">
+        <a href="/#" className="volume">
           <img className="icon" src={volume} alt="" />
         </a>
-        <a>75</a>
-        <a className="btn-primary">
+        <a href="/#">75</a>
+        <div className="btn-primary">
           <img className="icon" src={spotify} alt="" />
-        </a>
+        </div>
       </div>
     </div>
   );

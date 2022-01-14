@@ -1,19 +1,18 @@
-import React from "react";
-import Main from "../Main";
-import logo from "../static/logo2.jpg";
+import { observer } from "mobx-react-lite";
+import React, { useContext } from "react";
+import { Context } from "..";
 
-const Background = () => {
+const Background = observer(() => {
+  const { backgroundImage } = useContext(Context)
+
   return (
-
       <div className="background">
         <div
           className="main_backgroud"
-          style={{ backgroundImage: `url(${logo})` }}
+          style={{ backgroundImage: `url(${backgroundImage.backgroundImage})` }}
         ></div>
       </div>
-     
-
   );
-};
+});
 
 export default Background;
