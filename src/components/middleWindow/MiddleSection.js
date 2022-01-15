@@ -12,24 +12,24 @@ const MiddleSection = () => {
     <div className="middle_board">
       <div className="top_middle_board">
         <div className="links">
-          <div className="item">
+          <a href="https://resume.github.io/?saltypleb" target="_blank" className="item" rel="noopener noreferrer">
             <img className="b-icon" src={bot} alt="" />
-          </div>
-          <div className="item">
+          </a>
+          <a href="https://t.me/Evjentiy" target="_blank" className="item" rel="noopener noreferrer">
             <img className="b-icon" src={telegram} alt="" />
-          </div>
-          <div className="item">
+          </a>
+          <a href="https://www.instagram.com/saltyplebxedd/" target="_blank" className="item" rel="noopener noreferrer">
             <img className="b-icon" src={inst} alt="" />
-          </div>
-          <div className="item">
+          </a>
+          <a href="https://github.com/SaltyPleb" target="_blank" className="item" rel="noopener noreferrer">
             <img className="b-icon" src={gitcat} alt="" />
-          </div>
-          <div className="item">
+          </a>
+          <a href="https://github.com/" target="_blank" className="item" rel="noopener noreferrer">
             <img className="b-icon" src={gitlab} alt="" />
-          </div>
-          <div className="item">
+          </a>
+          <a href="https://github.com/" target="_blank" className="item" rel="noopener noreferrer">
             <img className="b-icon" src={books} alt="" />
-          </div>
+          </a>
         </div>
       </div>
 

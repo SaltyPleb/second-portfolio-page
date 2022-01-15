@@ -20,9 +20,9 @@ const LeftNav = () => {
       </div>
 
       <div className="other_btns">
-        <div className="btn-primary" href="#">
+        <a className="btn-primary" href="https://github.com/SaltyPleb/second-portfolio-page" target="_blank" rel="noopener noreferrer">
           <img className="icon" src={math} alt="" />
-        </div>
+        </a>
         <div className="btn-primary">
           <img className="icon" src={settings} alt="" />
         </div>
