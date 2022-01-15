@@ -9,8 +9,8 @@ $items-gap: .75rem;
     position: absolute;
     left: 50%;
     top: 50%;
-    width: 64%;
-    height: 76%;
+    width: calc(70px + 435px + 270px + 300px + $border-radius * 4);
+    height: auto;
     transform: translate(-50%, -50%);
 
     .middle_wrapper {
@@ -21,31 +21,78 @@ $items-gap: .75rem;
 }
 
 .middle_board {
-    background-color: $not-blue-color;
-    margin: 0 $items-gap;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: auto;
-    height: 140px;
-    border-radius: $border-radius;
 
-    .links {
-        display: grid;
-        grid-template-columns: 90px 90px 90px;
+    .top_middle_board {
+        background-color: $not-blue-color;
+        margin: 0 $items-gap;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: auto;
+        height: 140px;
+        border-radius: $border-radius;
+
+        .links {
+            display: grid;
+            grid-template-columns: 90px 90px 90px;
+
+            .item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+            }
+        }
+
+    }
+
+    .jst_btns {
+        display: flex;
+        background-color: $not-blue-color;
+        border-radius: $border-radius;
+        margin: $items-gap;
+        flex-direction: column;
+
+        .btn {
+            padding: 28px;
+            cursor: pointer;
+
+            &:hover {}
+        }
+
+        .text {
+            text-align: center;
+            text-decoration: solid;
+            font-weight: bold;
+            color: white !important;
+            font-size: larger;
+        }
+    }
+
+    .middle_bottom_card {
+        margin: $items-gap;
+        background-color: $not-blue-color;
+        border-radius: $border-radius;
+        display: flex;
+        justify-content: center;
+        align-self: center;
 
         .item {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
+            margin: 17px;
+            padding: 0;
+            // gap: 0;
+        }
+
+        .text {
+            color: white !important;
         }
     }
 }
 
 .right_board {
     .pic_wrapper {
-        padding-top: calc($items-gap + .250rem);
+        padding: calc($items-gap + .250rem) 0;
         gap: $items-gap;
         background-color: $not-blue-color;
         border-radius: $border-radius;
@@ -54,7 +101,7 @@ $items-gap: .75rem;
         align-items: center;
         flex-direction: column;
         width: 300px;
-        height: 310px;
+        height: auto;
 
         .me_image {
             height: 265px;
@@ -65,7 +112,23 @@ $items-gap: .75rem;
 
         a {
             color: #525b93;
+            text-decoration: none;
         }
+
+        .rainbow_text {
+            background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+            background-clip: text;
+            -webkit-background-clip: text;
+        }
+
+    }
+
+    .calendar {
+        width: 100%;
+        height: calc(706px - 387px - $border-radius);
+        background-color: $not-blue-color;
+        margin-top: $items-gap;
+        border-radius: $border-radius;
     }
 }
 
@@ -98,23 +161,56 @@ $items-gap: .75rem;
     }
 }
 
+.board-hide{
+    transition: 0.7s;
+    top: 3rem;
+    opacity: 0;
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+        margin-top: 70vh;
+    }
+
+    100% {
+        opacity: 1;
+        top: 50vh;
+    }
+}
+
+// @keyframes hide {
+//     0% {
+//         opacity: 1;
+//         top: 50vh;
+//     }
+
+//     100% {
+//         opacity: 0;
+//         margin-top: 70vh;
+//     }
+// }
+
 .board {
     display: flex;
     width: 450px;
     flex-direction: row;
+    transition: .95s;
+    animation: show 1s 1;
 
     .about_text {
         margin-top: $items-gap;
         background-color: $pink-color;
         border-radius: $border-radius;
         width: 100%;
+        height: 100px;
         padding: 20px 0;
 
         .text {
             display: flex;
             width: 85%;
             height: 76%;
-            text-align: center;
+            text-align: left;
             font-style: italic;
             display: block;
             margin: 0 auto;
@@ -146,6 +242,13 @@ $items-gap: .75rem;
         }
     }
 
+    .top_progress {
+        border-radius: $border-radius;
+        background-color: $not-blue-color;
+        padding: 5px;
+        margin-bottom: $items-gap;
+    }
+
     .skils {
         border-radius: $border-radius;
         background-color: $not-blue-color;
@@ -153,7 +256,7 @@ $items-gap: .75rem;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        height: 500px;
+        height: 320px;
         width: 100%;
     }
 

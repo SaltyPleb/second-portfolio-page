@@ -4,7 +4,7 @@ import settings from "../../static/settings.png";
 const leftSection = () => {
   return (
     <div className="left_board">
-      <div className="skils">
+      <div className="top_progress">
         <div className="item">
           <div className="">
             <img className="b-icon" src={settings} alt="" />
@@ -21,6 +21,8 @@ const leftSection = () => {
             <div className="progress-value second"></div>
           </div>
         </div>
+      </div>
+      <div className="skils">
         <div className="item">
           <div className="">
             <img className="b-icon" src={settings} alt="" />
