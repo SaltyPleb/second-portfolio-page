@@ -4,6 +4,7 @@ html {
     width: 100%;
     margin: 0;
     overflow: hidden;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .main_backgroud {
