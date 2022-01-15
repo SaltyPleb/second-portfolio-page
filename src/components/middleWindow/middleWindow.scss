@@ -20,6 +20,27 @@ $items-gap: .75rem;
     }
 }
 
+.middle_board {
+    background-color: $not-blue-color;
+    margin: 0 $items-gap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 140px;
+    border-radius: $border-radius;
+    .links{
+        display:grid;
+        grid-template-columns: 90px 90px 90px;
+        .item{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+    }
+}
+
 .left_top_btns {
     display: flex;
     gap: $items-gap;
@@ -52,7 +73,7 @@ $items-gap: .75rem;
 .board {
     display: flex;
     width: 450px;
-    flex-direction: column;
+    flex-direction: row;
 
     .about_text {
         margin-top: $items-gap;
