@@ -29,14 +29,42 @@ $items-gap: .75rem;
     width: auto;
     height: 140px;
     border-radius: $border-radius;
-    .links{
-        display:grid;
+
+    .links {
+        display: grid;
         grid-template-columns: 90px 90px 90px;
-        .item{
+
+        .item {
             display: flex;
             justify-content: center;
             align-items: center;
             cursor: pointer;
+        }
+    }
+}
+
+.right_board {
+    .pic_wrapper {
+        padding-top: calc($items-gap + .250rem);
+        gap: $items-gap;
+        background-color: $not-blue-color;
+        border-radius: $border-radius;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        flex-direction: column;
+        width: 300px;
+        height: 310px;
+
+        .me_image {
+            height: 265px;
+            width: 265px;
+            border-radius: 25px;
+            overflow: hidden;
+        }
+
+        a {
+            color: #525b93;
         }
     }
 }
@@ -81,7 +109,7 @@ $items-gap: .75rem;
         border-radius: $border-radius;
         width: 100%;
         padding: 20px 0;
-        
+
         .text {
             display: flex;
             width: 85%;
@@ -93,7 +121,7 @@ $items-gap: .75rem;
         }
     }
 
-    .bottom_btns{
+    .bottom_btns {
         margin-top: $items-gap;
         border-radius: $border-radius;
         background-color: $not-blue-color;
@@ -101,7 +129,8 @@ $items-gap: .75rem;
         justify-content: space-around;
         flex-direction: row;
         align-items: center;
-        .btn{
+
+        .btn {
             height: 70px;
             width: 70px;
             display: flex;
@@ -109,6 +138,7 @@ $items-gap: .75rem;
             align-items: center;
             border-radius: $border-radius;
             cursor: pointer;
+
             &:hover {
                 background-color: $pink-color;
                 transition: .95s linear;

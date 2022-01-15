@@ -1,6 +1,5 @@
 import React from "react";
 import "./middleWindow.scss";
-import settings from "../../static/settings.png";
 import finder from "../../static/find.png";
 import xmark from "../../static/xmark.png";
 import LeftSection from "./LeftSection";
