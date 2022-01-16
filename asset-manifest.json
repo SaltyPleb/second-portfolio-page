@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/second-portfolio-page/static/css/main.ad8f4319.css",
-    "main.js": "/second-portfolio-page/static/js/main.5a620c88.js",
+    "main.css": "/second-portfolio-page/static/css/main.d8b1a399.css",
+    "main.js": "/second-portfolio-page/static/js/main.b1a0b443.js",
     "static/media/bg2.jpg": "/second-portfolio-page/static/media/bg2.93d64970a0b3e45dc06e.jpg",
     "static/media/bg1.jpg": "/second-portfolio-page/static/media/bg1.91fe094ad12a4a2d9dff.jpg",
     "static/media/me.jpg": "/second-portfolio-page/static/media/me.8bccc0e5819ab834b0dd.jpg",
@@ -14,19 +14,23 @@
     "static/media/gitcat.png": "/second-portfolio-page/static/media/gitcat.d3de0e0b4d8deace3fe5.png",
     "static/media/volume-white.png": "/second-portfolio-page/static/media/volume-white.a122ff5cc041404fe259.png",
     "static/media/graph.png": "/second-portfolio-page/static/media/graph.784f4efcc2d1712ac297.png",
+    "static/media/moon.png": "/second-portfolio-page/static/media/moon.c5fc191fdbd1113eb9bc.png",
     "static/media/telegram.png": "/second-portfolio-page/static/media/telegram.30969a0d029068215cd1.png",
     "static/media/chat.png": "/second-portfolio-page/static/media/chat.6a0be5250a633482420c.png",
     "static/media/code.png": "/second-portfolio-page/static/media/code.c8a179df4cd5057ffa70.png",
+    "static/media/power.png": "/second-portfolio-page/static/media/power.7a878268c57cf4e08d88.png",
+    "static/media/sync.png": "/second-portfolio-page/static/media/sync.12df5bb8cf95d7692ba1.png",
     "static/media/settings.png": "/second-portfolio-page/static/media/settings.e9231fdb57051acbbfd9.png",
     "static/media/find.png": "/second-portfolio-page/static/media/find.d284cc49e18823a4b66b.png",
     "static/media/db.png": "/second-portfolio-page/static/media/db.d0b2af1cca97400d256b.png",
     "static/media/docs.png": "/second-portfolio-page/static/media/docs.4454c7f46740f6391822.png",
+    "static/media/lock.png": "/second-portfolio-page/static/media/lock.1a0837a3b3a40f7468d2.png",
     "index.html": "/second-portfolio-page/index.html",
-    "main.ad8f4319.css.map": "/second-portfolio-page/static/css/main.ad8f4319.css.map",
-    "main.5a620c88.js.map": "/second-portfolio-page/static/js/main.5a620c88.js.map"
+    "main.d8b1a399.css.map": "/second-portfolio-page/static/css/main.d8b1a399.css.map",
+    "main.b1a0b443.js.map": "/second-portfolio-page/static/js/main.b1a0b443.js.map"
   },
   "entrypoints": [
-    "static/css/main.ad8f4319.css",
-    "static/js/main.5a620c88.js"
+    "static/css/main.d8b1a399.css",
+    "static/js/main.b1a0b443.js"
   ]
 }
