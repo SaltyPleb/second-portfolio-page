@@ -1,29 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import settings from "../../static/settings.png";
 import volumeWhite from "../../static/volume-white.png";
 import en from "../../static/en-white.png";
 import code from "../../static/code.png";
 import db from "../../static/db.png";
 import design from "../../static/design.png";
-import ProgressBarWithBall from "./ProgressBar.component.js";
+import ProgressBar from "./ProgressBar.component.js";
+import power from "../../static/power.png";
+import sync from "../../static/sync.png";
+import moon from "../../static/moon.png";
+import logout from "../../static/logout.png";
+import lock from "../../static/lock.png";
 
-const leftSection = () => {
+const LeftSection = () => {
   const skilsValue = [
     { bgcolor: "#dfa974", completed: 60, icon: en },
     { bgcolor: "#dfa974", completed: 30, icon: code },
     { bgcolor: "#dfa974", completed: 53, icon: design },
     { bgcolor: "#dfa974", completed: 77, icon: db },
   ];
+
+  const [mouseCoordinates, setMouseCoordinates] = useState({x: 0, y: 0});
+  
   return (
     <div className="left_board">
       <div className="top_progress">
-        <div className="item">
+        <div className="item" >
           <img className="b-icon" src={volumeWhite} alt="" />
-          <ProgressBarWithBall completed={75} ball={true} bgcolor={"#dfa974"} />
+          <ProgressBar completed={75} ball={true} bgcolor={"#dfa974"} />
         </div>
         <div className="item">
           <img className="b-icon" src={settings} alt="" />
-          <ProgressBarWithBall completed={50} ball={true} bgcolor={"#dfa974"} />
+          <ProgressBar completed={50} ball={true} bgcolor={"#dfa974"} />
         </div>
       </div>
 
@@ -31,7 +39,7 @@ const leftSection = () => {
         {skilsValue.map((item, index) => (
           <div className="item">
             <img key={index} className="b-icon" src={item.icon} alt="" />
-            <ProgressBarWithBall
+            <ProgressBar
               completed={item.completed}
               bgcolor={item.bgcolor}
             />
@@ -48,23 +56,23 @@ const leftSection = () => {
 
       <div className="bottom_btns">
         <div className="btn">
-          <img className="b-icon" src={settings} alt="" />
+          <img className="b-icon" src={power} alt="" />
         </div>
         <div className="btn">
-          <img className="b-icon" src={settings} alt="" />
+          <img className="b-icon" src={sync} alt="" />
         </div>
         <div className="btn">
-          <img className="b-icon" src={settings} alt="" />
+          <img className="b-icon" src={moon} alt="" />
         </div>
         <div className="btn">
-          <img className="b-icon" src={settings} alt="" />
+          <img className="b-icon" src={logout} alt="" />
         </div>
         <div className="btn">
-          <img className="b-icon" src={settings} alt="" />
+          <img className="b-icon" src={lock} alt="" />
         </div>
       </div>
     </div>
   );
 };
 
-export default leftSection;
+export default LeftSection;

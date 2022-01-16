@@ -1,3 +1,4 @@
+import { type } from "@testing-library/user-event/dist/type";
 import React from "react";
 import styled, { keyframes } from "styled-components";
 
@@ -52,6 +53,7 @@ const ProgressBar = (props) => {
   return ball ? (
     <ProgressStyle>
       <ProgressValueStyle />
+      {/* <input type="range" min="1" max="100"></input> */}
       <ProgressCircleStyle>
         <SicStyle />
       </ProgressCircleStyle>

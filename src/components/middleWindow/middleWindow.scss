@@ -56,9 +56,7 @@ $items-gap: .75rem;
             grid-template-columns: 90px 90px 90px;
 
             .item {
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                @include flex-center();
                 cursor: pointer;
             }
         }
@@ -75,8 +73,12 @@ $items-gap: .75rem;
         .btn {
             padding: 28px;
             cursor: pointer;
-
-            &:hover {}
+            border-radius: 150px;
+            &:hover {
+                
+                background-color: $pink-color;
+                transition: 0.95s cubic-bezier(.29,.23,0,.72);
+            }
         }
 
         .text {
@@ -251,7 +253,7 @@ $items-gap: .75rem;
 
             &:hover {
                 background-color: $pink-color;
-                transition: .95s linear;
+                transition: 0.95s cubic-bezier(.29,.23,0,.72);
             }
         }
     }
