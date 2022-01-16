@@ -18,7 +18,7 @@ const MiddleWindow = observer(() => {
           <div className="btn green">
             <img className="b-icon" src={finder} alt="" />
           </div>
-          <div className="btn red">
+          <div className="btn red" onClick={() => backgroundImage.setBluredBackground(!backgroundImage.bluredBackground)} >
             <img className="b-icon" src={xmark} alt="" />
           </div>
         </div>

@@ -1,12 +1,14 @@
-.cat-container {
+/* .cat-container {
     height: 200px;
     width: 350px;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    left: 90%;
-    top: 90%;
     transition: .65s;
-}
+    align-items: center;
+    display: flex;
+    order: 1;
+    flex: 0 1 auto;
+    align-self: flex-end;
+    background-color: black !important;
+} */
 
 .cat {
     background-color: #f19b1a;

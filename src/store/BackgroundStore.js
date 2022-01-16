@@ -3,7 +3,7 @@ import { makeAutoObservable } from "mobx"
 export default class BackgroundStore {
     constructor() {
         this._backgroundImage=""
-        this._bluredBackground="true"
+        this._bluredBackground=""
 
         makeAutoObservable(this)
     }

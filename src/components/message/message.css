@@ -1,3 +1,9 @@
+.mes__wrapepr{
+    display: flex;
+    justify-content: center;
+    margin-top: 30vh;
+}
+
 .message {
     transform: translatey(0px);
     animation: float 5s ease-in-out infinite;
@@ -14,9 +20,7 @@
     box-shadow: 20px 20px #83af9b;
     font-family: 'Ubuntu', sans-serif;
     border: 1px solid #c8c8a9;
-    position: absolute;
-    left: calc(50% - 10vw);
-    top: calc(50% - 8vh);
+  
     width: clamp(200px, 50%, 400px);
     
 }

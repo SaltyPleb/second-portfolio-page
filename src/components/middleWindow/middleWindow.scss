@@ -7,10 +7,17 @@ $items-gap: .75rem;
 
 // Skils value 
 
-@mixin flex-center {
+$skill-en: 62%;
+$skill-code: 62%;
+$skill-design: 62%;
+$skill-db: 62%;
+
+
+@mixin flex-center ($direction: default) {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: $direction;
 }
 
 @mixin progress-fill($progress-value: 0%) {
@@ -45,10 +52,7 @@ $items-gap: .75rem;
     .top_middle_board {
         background-color: $not-blue-color;
         margin: 0 $items-gap;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+        @include flex-center($direction: row);
         width: auto;
         height: 140px;
         border-radius: $border-radius;
@@ -94,8 +98,7 @@ $items-gap: .75rem;
         margin: $items-gap;
         background-color: $not-blue-color;
         border-radius: $border-radius;
-        display: flex;
-        justify-content: center;
+        @include flex-center();
         align-self: center;
 
         .item {
@@ -116,9 +119,7 @@ $items-gap: .75rem;
         gap: $items-gap;
         background-color: $not-blue-color;
         border-radius: $border-radius;
-        display: flex;
-        justify-items: center;
-        align-items: center;
+        @include flex-center();
         flex-direction: column;
         width: 300px;
         height: auto;
@@ -158,9 +159,7 @@ $items-gap: .75rem;
     flex-direction: column;
 
     .btn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex-center();
         width: 70px;
         height: 70px;
         border-radius: $border-radius;
@@ -182,17 +181,18 @@ $items-gap: .75rem;
 }
 
 .board-hide {
-    animation: hide 1s both;
+    animation: hide 1s forwards;
 }
 
 .board-show {
-    animation: show 1s both;
+    animation: show 1s forwards;
 }
 
 @keyframes show {
     0% {
         opacity: 0;
         margin-top: 70vh;
+        display: none;
     }
 
     100% {
@@ -210,6 +210,7 @@ $items-gap: .75rem;
     100% {
         opacity: 0;
         margin-top: 70vh;
+        display: none;
     }
 }
 
@@ -250,9 +251,7 @@ $items-gap: .75rem;
         .btn {
             height: 70px;
             width: 70px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include flex-center();
             border-radius: $border-radius;
             cursor: pointer;
 
@@ -273,10 +272,7 @@ $items-gap: .75rem;
     .skils {
         border-radius: $border-radius;
         background-color: $not-blue-color;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+        @include flex-center($direction: column);
         height: 320px;
         width: 100%;
     }
@@ -303,15 +299,30 @@ $items-gap: .75rem;
         display: flex;
         height: 20px;
         width: 330px;
+
+        .circle {
+            position: relative;
+            width: .011rem;
+            
+            .sic {
+                position: relative;
+                background: white;
+                border-radius: 100px;
+                height: 20px;
+                width: 20px;
+                left: -15px;
+            }
+        }
     }
 
     .progress-value {
+        position: relative;
         box-shadow: 0 10px 40px -10px #fff;
         border-radius: 100px;
-        background: #fff;
+        background: #dfa974;
         height: 15px;
-        width: 0;
-        animation: load 3s normal forwards;
+        // width: 0;
+        animation: skill-en 3s normal forwards;
     }
 
     .first {
@@ -328,7 +339,7 @@ $items-gap: .75rem;
         }
 
         100% {
-            width: 68%;
+            width: 100%;
         }
     }
 
@@ -341,4 +352,41 @@ $items-gap: .75rem;
             width: 92%;
         }
     }
+
+    @keyframes skill-en {
+        0% {
+            width: 0;
+        }
+
+        100% {
+            width: $skill-en;
+        }
+    }
+}
+
+@media only screen and (max-width: 980px) {
+    
+    .navbar {
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        gap: $items-gap;
+    }
+
+    .message {
+        left: calc(50% - 40vw);
+    }
+
+    .board{
+        position: absolute;
+        transition: .95s;
+        @include flex-center($direction: column);
+        left: 50%;
+        display: none !important;
+    }
+
+    .middle_screen {
+        display: none;
+    }
+
 }

@@ -13,7 +13,7 @@ const Main = observer(() => {
 
   return (
     <div className="main">
-       <MiddleWindow /> 
+      {backgroundImage.bluredBackground ? <MiddleWindow /> : null}
       <Navbar />
       <Cat />
       {backgroundImage.bluredBackground ? null : <Message />}
