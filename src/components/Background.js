@@ -8,7 +8,7 @@ const Background = observer(() => {
   return (
       <div className="background">
         <div
-          className="main_backgroud"
+          className={`main_backgroud ${backgroundImage.bluredBackground ? "blured_backgroud" : ""}`}
           style={{ backgroundImage: `url(${backgroundImage.backgroundImage})` }}
         ></div>
       </div>

@@ -1,0 +1,392 @@
+$border-radius: .645rem;
+$green-color: #87fb90;
+$red-color: #e86257;
+$not-blue-color: #2a2a34;
+$pink-color: #b896f4;
+$items-gap: .75rem;
+
+// Skils value 
+
+$skill-en: 62%;
+$skill-code: 62%;
+$skill-design: 62%;
+$skill-db: 62%;
+
+
+@mixin flex-center ($direction: default) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+@mixin progress-fill($progress-value: 0%) {
+    @keyframes load {
+        0% {
+            width: 0;
+        }
+
+        100% {
+            width: $progress-value;
+        }
+    }
+}
+
+.middle_screen {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: calc(70px + 435px + 270px + 300px + $border-radius * 4);
+    height: auto;
+    transform: translate(-50%, -50%);
+
+    .middle_wrapper {
+        gap: $items-gap;
+        display: flex;
+        width: 100%;
+    }
+}
+
+.middle_board {
+
+    .top_middle_board {
+        background-color: $not-blue-color;
+        margin: 0 $items-gap;
+        @include flex-center($direction: row);
+        width: auto;
+        height: 140px;
+        border-radius: $border-radius;
+
+        .links {
+            display: grid;
+            grid-template-columns: 90px 90px 90px;
+
+            .item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+            }
+        }
+
+    }
+
+    .jst_btns {
+        display: flex;
+        background-color: $not-blue-color;
+        border-radius: $border-radius;
+        margin: $items-gap;
+        flex-direction: column;
+
+        .btn {
+            padding: 28px;
+            cursor: pointer;
+
+            &:hover {}
+        }
+
+        .text {
+            text-align: center;
+            text-decoration: solid;
+            font-weight: bold;
+            color: white !important;
+            font-size: larger;
+        }
+    }
+
+    .middle_bottom_card {
+        margin: $items-gap;
+        background-color: $not-blue-color;
+        border-radius: $border-radius;
+        @include flex-center();
+        align-self: center;
+
+        .item {
+            margin: 17px;
+            padding: 0;
+            // gap: 0;
+        }
+
+        .text {
+            color: white !important;
+        }
+    }
+}
+
+.right_board {
+    .pic_wrapper {
+        padding: calc($items-gap + .250rem) 0;
+        gap: $items-gap;
+        background-color: $not-blue-color;
+        border-radius: $border-radius;
+        @include flex-center();
+        flex-direction: column;
+        width: 300px;
+        height: auto;
+
+        .me_image {
+            height: 265px;
+            width: 265px;
+            border-radius: 25px;
+            overflow: hidden;
+        }
+
+        a {
+            color: #525b93;
+            text-decoration: none;
+        }
+
+        .rainbow_text {
+            background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+            background-clip: text;
+            -webkit-background-clip: text;
+        }
+
+    }
+
+    .react-calendar {
+        width: 100%;
+        height: calc(706px - 387px - $border-radius);
+        background-color: $not-blue-color;
+        margin-top: $items-gap;
+        border-radius: $border-radius;
+    }
+}
+
+.left_top_btns {
+    display: flex;
+    gap: $items-gap;
+    flex-direction: column;
+
+    .btn {
+        @include flex-center();
+        width: 70px;
+        height: 70px;
+        border-radius: $border-radius;
+        cursor: pointer;
+    }
+
+    .red {
+        background-color: $red-color;
+    }
+
+    .green {
+        background-color: $green-color;
+    }
+
+    .b-icon {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.board-hide {
+    animation: hide 1s forwards;
+}
+
+.board-show {
+    animation: show 1s forwards;
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+        margin-top: 70vh;
+        display: none;
+    }
+
+    100% {
+        opacity: 1;
+        top: 50vh;
+    }
+}
+
+@keyframes hide {
+    0% {
+        opacity: 1;
+        top: 50vh;
+    }
+
+    100% {
+        opacity: 0;
+        margin-top: 70vh;
+        display: none;
+    }
+}
+
+.board {
+    display: flex;
+    width: 450px;
+    flex-direction: row;
+    transition: .95s;
+
+    .about_text {
+        margin-top: $items-gap;
+        background-color: $pink-color;
+        border-radius: $border-radius;
+        width: 100%;
+        height: 100px;
+        padding: 20px 0;
+
+        .text {
+            display: flex;
+            width: 85%;
+            height: 76%;
+            text-align: left;
+            font-style: italic;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
+    .bottom_btns {
+        margin-top: $items-gap;
+        border-radius: $border-radius;
+        background-color: $not-blue-color;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        align-items: center;
+
+        .btn {
+            height: 70px;
+            width: 70px;
+            @include flex-center();
+            border-radius: $border-radius;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $pink-color;
+                transition: .95s linear;
+            }
+        }
+    }
+
+    .top_progress {
+        border-radius: $border-radius;
+        background-color: $not-blue-color;
+        padding: 5px;
+        margin-bottom: $items-gap;
+    }
+
+    .skils {
+        border-radius: $border-radius;
+        background-color: $not-blue-color;
+        @include flex-center($direction: column);
+        height: 320px;
+        width: 100%;
+    }
+
+    .b-icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .item {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin: 20px 20px 15px 20px;
+    }
+
+    .progress {
+        background: rgba(255, 255, 255, 0.1);
+        justify-content: flex-start;
+        border-radius: 100px;
+        align-items: center;
+        position: relative;
+        padding: 0 5px;
+        display: flex;
+        height: 20px;
+        width: 330px;
+
+        .circle {
+            position: relative;
+            width: .011rem;
+            
+            .sic {
+                position: relative;
+                background: white;
+                border-radius: 100px;
+                height: 20px;
+                width: 20px;
+                left: -15px;
+            }
+        }
+    }
+
+    .progress-value {
+        position: relative;
+        box-shadow: 0 10px 40px -10px #fff;
+        border-radius: 100px;
+        background: #dfa974;
+        height: 15px;
+        // width: 0;
+        animation: skill-en 3s normal forwards;
+    }
+
+    .first {
+        animation: load 3s normal forwards;
+    }
+
+    .second {
+        animation: load1 3s normal forwards;
+    }
+
+    @keyframes load {
+        0% {
+            width: 0;
+        }
+
+        100% {
+            width: 100%;
+        }
+    }
+
+    @keyframes load1 {
+        0% {
+            width: 0;
+        }
+
+        100% {
+            width: 92%;
+        }
+    }
+
+    @keyframes skill-en {
+        0% {
+            width: 0;
+        }
+
+        100% {
+            width: $skill-en;
+        }
+    }
+}
+
+@media only screen and (max-width: 980px) {
+    
+    .navbar {
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        gap: $items-gap;
+    }
+
+    .message {
+        left: calc(50% - 40vw);
+    }
+
+    .board{
+        position: absolute;
+        transition: .95s;
+        @include flex-center($direction: column);
+        left: 50%;
+        display: none !important;
+    }
+
+    .middle_screen {
+        display: none;
+    }
+
+}

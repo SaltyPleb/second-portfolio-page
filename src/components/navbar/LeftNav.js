@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import gridIcons from "../../static/grid.png";
 import math from "../../static/math.png";
 import settings from "../../static/settings.png";
@@ -7,18 +7,22 @@ import chat from "../../static/chat.png";
 import docs from "../../static/docs.png";
 import volume from "../../static/volume.png";
 import spotify from "../../static/spotify2.png";
+import { Context } from "../..";
 
 const LeftNav = () => {
+
+  const { backgroundImage } = useContext(Context)
+  
   return (
     <div className="left_nav">
-      <div className="main_btn">
+      <div className="main_btn" onClick={()=>{backgroundImage.setBluredBackground(!backgroundImage.bluredBackground)}}>
         <img className="icon" src={gridIcons} alt="" />
       </div>
 
       <div className="other_btns">
-        <div className="btn-primary" href="#">
+        <a className="btn-primary" href="https://github.com/SaltyPleb/second-portfolio-page" target="_blank" rel="noopener noreferrer">
           <img className="icon" src={math} alt="" />
-        </div>
+        </a>
         <div className="btn-primary">
           <img className="icon" src={settings} alt="" />
         </div>
