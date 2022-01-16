@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import me from "../../static/me.jpg";
+import "react-calendar/dist/Calendar.css";
+import Calendar from "react-calendar";
 
 const RightSection = () => {
   const [imgloaded, setImgloaded] = useState(false);
-
+  const [date, setDate] = useState(new Date());
   return (
     <div className="right_board">
       <div className="pic_wrapper">
@@ -24,7 +26,14 @@ const RightSection = () => {
           #react #scss #styled-components
         </a>
       </div>
-      <div className="calendar"></div>
+      <div className="calendar">
+        <div className="calendar-container">
+          <Calendar onChange={setDate} value={date} />
+        </div>
+        {/* <p className="text-center">
+          <span className="bold">Selected Date:</span> {date.toDateString()}
+        </p> */}
+      </div>
     </div>
   );
 };

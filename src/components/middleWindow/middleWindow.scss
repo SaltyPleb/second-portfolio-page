@@ -5,6 +5,26 @@ $not-blue-color: #2a2a34;
 $pink-color: #b896f4;
 $items-gap: .75rem;
 
+// Skils value 
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin progress-fill($progress-value: 0%) {
+    @keyframes load {
+        0% {
+            width: 0;
+        }
+
+        100% {
+            width: $progress-value;
+        }
+    }
+}
+
 .middle_screen {
     position: absolute;
     left: 50%;
@@ -123,7 +143,7 @@ $items-gap: .75rem;
 
     }
 
-    .calendar {
+    .react-calendar {
         width: 100%;
         height: calc(706px - 387px - $border-radius);
         background-color: $not-blue-color;
@@ -161,10 +181,12 @@ $items-gap: .75rem;
     }
 }
 
-.board-hide{
-    transition: 0.7s;
-    top: 3rem;
-    opacity: 0;
+.board-hide {
+    animation: hide 1s both;
+}
+
+.board-show {
+    animation: show 1s both;
 }
 
 @keyframes show {
@@ -179,24 +201,23 @@ $items-gap: .75rem;
     }
 }
 
-// @keyframes hide {
-//     0% {
-//         opacity: 1;
-//         top: 50vh;
-//     }
+@keyframes hide {
+    0% {
+        opacity: 1;
+        top: 50vh;
+    }
 
-//     100% {
-//         opacity: 0;
-//         margin-top: 70vh;
-//     }
-// }
+    100% {
+        opacity: 0;
+        margin-top: 70vh;
+    }
+}
 
 .board {
     display: flex;
     width: 450px;
     flex-direction: row;
     transition: .95s;
-    animation: show 1s 1;
 
     .about_text {
         margin-top: $items-gap;

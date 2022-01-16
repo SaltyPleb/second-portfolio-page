@@ -12,7 +12,7 @@ const MiddleWindow = observer(() => {
   const { backgroundImage } = useContext(Context)
 
   return (
-    <div className={`middle_screen`}>
+    <div className={`middle_screen ${backgroundImage.bluredBackground ? "board-show" : "board-hide"}`}>
       <div className="middle_wrapper">
         <div className="left_top_btns">
           <div className="btn green">
@@ -22,7 +22,8 @@ const MiddleWindow = observer(() => {
             <img className="b-icon" src={xmark} alt="" />
           </div>
         </div>
-        <div className="board">
+        <div className={`board`}>
+        {/* <div className={`board ${backgroundImage.bluredBackground ? "board-show" : "board-hide"}`}> */}
           <LeftSection />
           <MiddleSection />
           <RightSection />
