@@ -69,7 +69,7 @@ const leftSection = () => {
       </div>
       <div className="about_text">
         <div className="text">
-        Node.JS, React, technical specialist, team lead, project lead. Keen on back-end development using, but also love to produce butiful and good working front-end part:)
+        Node.JS, React, technical specialist, team lead, project lead. Keen on back-end development using, but also love to produce beautiful and good working front-end part:)
         </div>
       </div>
 
