@@ -5,12 +5,6 @@ $not-blue-color: #2a2a34;
 $pink-color: #b896f4;
 $items-gap: .75rem;
 
-// Skils value 
-
-$skill-en: 62%;
-$skill-code: 62%;
-$skill-design: 62%;
-$skill-db: 62%;
 
 
 @mixin flex-center ($direction: default) {
@@ -216,7 +210,6 @@ $skill-db: 62%;
 
 .board {
     display: flex;
-    width: 450px;
     flex-direction: row;
     transition: .95s;
 
@@ -290,79 +283,6 @@ $skill-db: 62%;
         margin: 20px 20px 15px 20px;
     }
 
-    .progress {
-        background: rgba(255, 255, 255, 0.1);
-        justify-content: flex-start;
-        border-radius: 100px;
-        align-items: center;
-        position: relative;
-        padding: 0 5px;
-        display: flex;
-        height: 20px;
-        width: 330px;
-
-        .circle {
-            position: relative;
-            width: .011rem;
-            
-            .sic {
-                position: relative;
-                background: white;
-                border-radius: 100px;
-                height: 20px;
-                width: 20px;
-                left: -15px;
-            }
-        }
-    }
-
-    .progress-value {
-        position: relative;
-        box-shadow: 0 10px 40px -10px #fff;
-        border-radius: 100px;
-        background: #dfa974;
-        height: 15px;
-        // width: 0;
-        animation: skill-en 3s normal forwards;
-    }
-
-    .first {
-        animation: load 3s normal forwards;
-    }
-
-    .second {
-        animation: load1 3s normal forwards;
-    }
-
-    @keyframes load {
-        0% {
-            width: 0;
-        }
-
-        100% {
-            width: 100%;
-        }
-    }
-
-    @keyframes load1 {
-        0% {
-            width: 0;
-        }
-
-        100% {
-            width: 92%;
-        }
-    }
-
-    @keyframes skill-en {
-        0% {
-            width: 0;
-        }
-
-        100% {
-            width: $skill-en;
-        }
-    }
 }
 
 @media only screen and (max-width: 980px) {
