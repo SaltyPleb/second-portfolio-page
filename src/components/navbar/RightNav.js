@@ -14,7 +14,7 @@ const RightNav = () => {
   const [dateState, setDateState] = useState(new Date());
   useEffect(() => {
     backgroundImage.setBackgroundImage(getImage());
-    setInterval(() => setDateState(new Date()), 100);
+    setInterval(() => setDateState(new Date()), 1000);
   }, []);
 
   const getImage = () => {

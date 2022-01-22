@@ -5,14 +5,17 @@ $not-black-color: #3d3e49;
 $pink-color: #b896f4;
 $dark-ping-color: #9e62af;
 $items-gap: .80rem;
+$big-items-gap: calc($items-gap + 17px);
 $orange-color: #fd7347;
 $blue-color: #2b56b5;
 $light-pink-color: #d0506d;
 $almost-black-color: #222128;
 $light-blue-color: #62f3f7;
+$light-green-color: #23bfc0;
 
 @mixin item-hover-pop {
     transition: all 0.2s;
+
     &:hover {
         box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
         transform: scale(1.01);
@@ -20,10 +23,11 @@ $light-blue-color: #62f3f7;
 }
 
 .task_page_container {
+    margin-top: 50px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin: auto;
+    // margin: auto;
     border-radius: 5rem;
     padding: 10px;
     // background-color: $not-black-color;
@@ -108,14 +112,131 @@ $light-blue-color: #62f3f7;
         cursor: pointer;
         background: linear-gradient(45deg, $light-blue-color -81%, $blue-color 93%);
         border-radius: $border-radius;
-        margin-top: calc($items-gap + 15px);
+        margin-top: $big-items-gap;
         height: 50px;
 
         @include item-hover-pop;
 
-        img{
+        img {
             height: 15px;
             margin-right: 5px;
+        }
+    }
+
+
+    .selectors {
+        .days {
+            gap: $items-gap;
+            margin-top: $big-items-gap;
+            display: flex;
+
+            &>div {
+                // color: white;
+                cursor: pointer;
+                @include item-hover-pop;
+                border-radius: $border-radius;
+                background-color: $almost-black-color;
+                gap: $items-gap;
+                padding: $items-gap;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: bold;
+            }
+
+            &__today {
+                color: $red-color;
+            }
+
+            &__tomorrow {
+                color: $blue-color;
+            }
+        }
+
+        .types {
+            margin-top: $items-gap;
+            display: flex;
+            flex-direction: row;
+            gap: $items-gap;
+
+            .type {
+                @include item-hover-pop;
+                cursor: pointer;
+                height: 20px;
+                width: 20px;
+                background-color: $almost-black-color;
+                padding: $items-gap;
+                border-radius: $border-radius;
+            }
+        }
+    }
+
+    .tags {
+        margin-top: $big-items-gap;
+        min-height: 100px;
+        // background-color: $almost-black-color;
+        border-radius: $border-radius;
+
+        .selected_type {
+            position: relative;
+            top: 10px;
+            justify-content: center;
+            align-items: flex-end;
+            background-color: $almost-black-color;
+            border-radius: $border-radius $border-radius 0 0;
+            height: 35px;
+            width: 45px;
+            gap: $items-gap;
+
+            &>.image {
+                align-items: flex-end;
+                justify-content: space-around;
+                height: 30px;
+                display: flex;
+            }
+
+            
+        }
+
+        .wrapper {
+            padding: 22px 15px 7px 15px;
+            background-color: $almost-black-color;
+            border-radius: $border-radius;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: row;
+            min-width: 40px;
+            max-width: 320px;
+            flex-wrap: wrap;
+
+            &>div {
+                cursor: pointer;
+                @include item-hover-pop;
+                margin-right: $items-gap;
+                font-weight: bold;
+                margin-bottom: 15px;
+            }
+
+            .tag{
+                border-radius: $border-radius;
+                padding: 4px 12px;
+                color: $blue-color;
+                background-color: rgba(30, 48, 60, 1);
+                // opacity: 0.5;
+            }
+
+            .selected{
+                background-color: $blue-color;
+                color: white !important;
+                opacity: 1;
+            }
+
+            .add_tag {
+                color: gray !important;
+                border-radius: $border-radius;
+                padding: 4px 12px;
+                border: 1px solid gray !important;
+            }
         }
     }
 }

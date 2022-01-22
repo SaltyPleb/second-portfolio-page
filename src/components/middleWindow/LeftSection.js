@@ -20,12 +20,12 @@ const LeftSection = () => {
     { bgcolor: "#dfa974", completed: 77, icon: db },
   ];
 
-  const [mouseCoordinates, setMouseCoordinates] = useState({x: 0, y: 0});
-  
+  const [mouseCoordinates, setMouseCoordinates] = useState({ x: 0, y: 0 });
+
   return (
     <div className="left_board">
       <div className="top_progress">
-        <div className="item" >
+        <div className="item">
           <img className="b-icon" src={volumeWhite} alt="" />
           <ProgressBar completed={75} ball={true} bgcolor={"#dfa974"} />
         </div>
@@ -38,8 +38,9 @@ const LeftSection = () => {
       <div className="skils">
         {skilsValue.map((item, index) => (
           <div kay={index} className="item">
-            <img key={index} className="b-icon" src={item.icon} alt="" />
+            <img className="b-icon" src={item.icon} alt="" />
             <ProgressBar
+              key={index}
               completed={item.completed}
               bgcolor={item.bgcolor}
             />

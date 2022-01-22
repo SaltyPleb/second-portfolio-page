@@ -1,14 +1,24 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import "./taskPageStyle.scss";
 import pen from "../../../static/pen.png";
 import plus from "../../../static/plus.png";
+import redstar from "../../../static/redstar.png";
+import bluecalendar from "../../../static/bluecalendar.png";
+import message from "../../../static/message.png";
+import { observer } from "mobx-react-lite";
+import { Context } from "../../..";
 
-const TaskPage = () => {
+const TaskPage = observer(() => {
+  const { tasksStore } = useContext(Context);
   const tasks = [
     { bgcolor: "green", tasks: 60, name: "General" },
     { bgcolor: "blue", tasks: 30, name: "Meetings" },
     { bgcolor: "lblue", tasks: 53, name: "Trips" },
   ];
+  var selectedType = "";
+
+  useEffect(() => {
+  }, [tasksStore.selectedType]);
 
   return (
     <div className="task_page_container">
@@ -29,22 +39,57 @@ const TaskPage = () => {
           <img src={plus} alt="/s" className="plus" />
           CREATE NEW GROUP
         </div>
-        <div className="days">
-          <div className="today"></div>
-          <div className="tomorrow"></div>
+        <div className="selectors">
+          <div className="days">
+            <div className="days__today">
+              <img src={redstar} alt="" className="icon" /> Today
+            </div>
+            <div className="days__tomorrow">
+              <img src={bluecalendar} alt="" className="icon" /> Tomorrow
+            </div>
+          </div>
+          <div className="types">
+            {tasksStore.types.map((item, index) => (
+              <div
+                onClick={() => tasksStore.setSelectedType(item.icon)}
+                key={index}
+                className="type"
+              >
+                <img src={item.icon} alt="/s" className="icon" />
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="types">
-          <div className="type"></div>
-          <div className="type"></div>
-          <div className="type"></div>
-          <div className="type"></div>
+        <div className="tags">
+          <div className="selected_type">
+            <div className="image">
+              <img src={tasksStore.selectedType} alt="/s" className="icon" />
+            </div>
+          </div>
+          <div className="wrapper">
+            {tasksStore.tags.map((item, index) => (
+              <div
+                key={index}
+                className={`tag ${item.selected ? "selected" : null}`}
+              >
+                {item.name}
+              </div>
+            ))}
+            <div
+              onClick={() =>
+                tasksStore.tags.push({ selected: false, name: "Lol" })
+              }
+              className="add_tag"
+            >
+              Add tag
+            </div>
+          </div>
         </div>
-        <div className="tags"></div>
       </div>
       <div className="section__middle"></div>
       <div className="section__right"></div>
     </div>
   );
-};
+});
 
 export default TaskPage;

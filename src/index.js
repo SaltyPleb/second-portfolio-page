@@ -3,11 +3,12 @@ import ReactDOM from "react-dom";
 import Background from "./components/Background";
 import Main from "./Main";
 import BackgroundStore from "./store/BackgroundStore.js";
+import TasksStore from "./store/TasksStore.js";
 
 export const Context = createContext(null);
 
 ReactDOM.render(
-  <Context.Provider value={{ backgroundImage: new BackgroundStore() }}>
+  <Context.Provider value={{ backgroundImage: new BackgroundStore(), tasksStore: new TasksStore() }}>
     <React.StrictMode>
       <Background />
       <Main />

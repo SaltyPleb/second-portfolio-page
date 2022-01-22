@@ -6,9 +6,9 @@ import LeftSection from "./LeftSection";
 import MiddleSection from "./MiddleSection";
 import RightSection from "./RightSection";
 import { Context } from "../..";
-import { observer } from "mobx-react-lite";
+// import { observer } from "mobx-react-lite";
 
-const MiddleWindow = observer(() => {
+const MiddleWindow = () => {
   const { backgroundImage } = useContext(Context)
 
   return (
@@ -31,6 +31,6 @@ const MiddleWindow = observer(() => {
       </div>
     </div>
   );
-});
+};
 
 export default MiddleWindow;
