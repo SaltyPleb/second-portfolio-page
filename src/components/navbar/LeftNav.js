@@ -9,6 +9,7 @@ import volume from "../../static/volume.png";
 import spotify from "../../static/spotify2.png";
 import { Context } from "../..";
 import { Link } from "react-router-dom";
+import {HOME_PAGE, MONGO_TASK_PAGE}  from "../../utils/consts"
 
 const LeftNav = () => {
 
@@ -16,7 +17,7 @@ const LeftNav = () => {
   
   return (
     <div className="left_nav">
-      <Link to="/" className="main_btn" onClick={()=>{backgroundImage.setBluredBackground(!backgroundImage.bluredBackground)}}>
+      <Link to={HOME_PAGE} className="main_btn" onClick={()=>{backgroundImage.setBluredBackground(!backgroundImage.bluredBackground)}}>
         <img className="icon" src={gridIcons} alt="" />
       </Link>
 
@@ -30,7 +31,7 @@ const LeftNav = () => {
         <div className="btn-primary">
           <img className="icon" src={graph} alt="" />
         </div>
-        <Link to="/tasks" className="btn-primary">
+        <Link to={MONGO_TASK_PAGE} className="btn-primary">
           <img className="icon" src={docs} alt="" />
         </Link>
         <div className="btn-primary">
