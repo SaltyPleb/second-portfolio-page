@@ -8,6 +8,7 @@ import docs from "../../static/docs.png";
 import volume from "../../static/volume.png";
 import spotify from "../../static/spotify2.png";
 import { Context } from "../..";
+import { Link } from "react-router-dom";
 
 const LeftNav = () => {
 
@@ -15,9 +16,9 @@ const LeftNav = () => {
   
   return (
     <div className="left_nav">
-      <div className="main_btn" onClick={()=>{backgroundImage.setBluredBackground(!backgroundImage.bluredBackground)}}>
+      <Link to="/" className="main_btn" onClick={()=>{backgroundImage.setBluredBackground(!backgroundImage.bluredBackground)}}>
         <img className="icon" src={gridIcons} alt="" />
-      </div>
+      </Link>
 
       <div className="other_btns">
         <a className="btn-primary" href="https://github.com/SaltyPleb/second-portfolio-page" target="_blank" rel="noopener noreferrer">
@@ -29,9 +30,9 @@ const LeftNav = () => {
         <div className="btn-primary">
           <img className="icon" src={graph} alt="" />
         </div>
-        <div className="btn-primary">
+        <Link to="/tasks" className="btn-primary">
           <img className="icon" src={docs} alt="" />
-        </div>
+        </Link>
         <div className="btn-primary">
           <img className="icon" src={chat} alt="" />
         </div>

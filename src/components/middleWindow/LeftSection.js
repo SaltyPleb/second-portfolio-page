@@ -37,7 +37,7 @@ const LeftSection = () => {
 
       <div className="skils">
         {skilsValue.map((item, index) => (
-          <div className="item">
+          <div kay={index} className="item">
             <img key={index} className="b-icon" src={item.icon} alt="" />
             <ProgressBar
               completed={item.completed}

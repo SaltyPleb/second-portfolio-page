@@ -1,0 +1,121 @@
+$border-radius: .845rem;
+$green-color: #87fb90;
+$red-color: #e86257;
+$not-black-color: #3d3e49;
+$pink-color: #b896f4;
+$dark-ping-color: #9e62af;
+$items-gap: .80rem;
+$orange-color: #fd7347;
+$blue-color: #2b56b5;
+$light-pink-color: #d0506d;
+$almost-black-color: #222128;
+$light-blue-color: #62f3f7;
+
+@mixin item-hover-pop {
+    transition: all 0.2s;
+    &:hover {
+        box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+        transform: scale(1.01);
+    }
+}
+
+.task_page_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: auto;
+    border-radius: 5rem;
+    padding: 10px;
+    // background-color: $not-black-color;
+    // width: clamp(50%, 50%, 80%);
+    height: 90vh;
+}
+
+.section__left {
+    width: clamp(300px, 50%, 320px);
+
+    .groups {
+        display: flex;
+        flex-direction: column;
+        gap: $items-gap;
+
+
+        .group {
+            background-color: $almost-black-color;
+            border-radius: $border-radius;
+            height: 80px;
+
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            cursor: pointer;
+
+            @include item-hover-pop;
+
+            .icon {
+                position: sticky;
+                margin: 0 5px 0 5px;
+                height: 30px;
+                width: 30px;
+            }
+
+            .color {
+                width: 5px;
+                border-radius: 100px;
+                background-color: $blue-color;
+                height: 75%;
+                float: left;
+                margin-left: 15px;
+
+            }
+
+            .lblue {
+                background-color: $light-blue-color;
+            }
+
+            .green {
+                background-color: $green-color;
+            }
+
+            .item {
+                .name {
+                    color: white !important;
+                    margin-left: 15px;
+                    font-size: larger;
+                    font-weight: bold;
+                    margin-bottom: .5rem;
+                    max-width: 230px;
+                    min-width: 230px;
+                    width: clamp(200px, 50%, 80px);
+                    overflow: hidden;
+                }
+
+                .tasks_count {
+                    color: gray !important;
+                    margin-left: 15px;
+                }
+            }
+        }
+    }
+
+    .create-gpoup {
+        color: white !important;
+        font-size: smaller;
+        font-weight: bold;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        background: linear-gradient(45deg, $light-blue-color -81%, $blue-color 93%);
+        border-radius: $border-radius;
+        margin-top: calc($items-gap + 15px);
+        height: 50px;
+
+        @include item-hover-pop;
+
+        img{
+            height: 15px;
+            margin-right: 5px;
+        }
+    }
+}
