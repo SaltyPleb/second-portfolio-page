@@ -22,9 +22,20 @@ export default class TasksStore {
       { icon: message, name: "message" }
     ];
 
+    this._tasks = [
+      {task: "Help with Sam's project", done: false, user: "sam"},
+      {task: "Help with Anna pets and children", done: true, user: "sam"},
+      {task: "Fix some UI issues", done: true, user: "sam"},
+      {task: "Feed your self :)", done: false, user: "sam"},
+    ];
+
     this._selectedType = calendar;
 
     makeAutoObservable(this);
+  }
+
+  get tasks() {
+    return this._tasks;
   }
 
   get types() {
@@ -39,8 +50,12 @@ export default class TasksStore {
     return this._selectedType;
   }
 
+  setTasks(tasks){
+    this._tasks = tasks;
+  }
+
   setTypes(types) {
-    this.types = types;
+    this._types = types;
   }
 
   setSelectedType(selectedType) {
