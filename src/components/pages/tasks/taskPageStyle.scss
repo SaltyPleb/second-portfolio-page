@@ -194,9 +194,22 @@ $light-green-color: #23bfc0;
                 height: 30px;
                 display: flex;
             }
-
-            
         }
+
+        .selected_type:before{
+            content:'';
+            width:40px;
+            height:10px;
+            border:6px solid $almost-black-color;
+            position:absolute;
+            bottom:.250rem;
+            border-top:0;
+            border-right:0;
+            // border-radius:0 0 0 calc($border-radius + 40px);
+            -webkit-border-radius:0 0 0 calc($border-radius + 40px);
+            right:-40px;
+        }
+
 
         .wrapper {
             padding: 22px 15px 7px 15px;
