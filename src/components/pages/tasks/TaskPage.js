@@ -4,10 +4,12 @@ import pen from "../../../static/pen.png";
 import plus from "../../../static/plus.png";
 import redstar from "../../../static/redstar.png";
 import bluecalendar from "../../../static/bluecalendar.png";
-import menu from "../../../static/menu.png";
 import { observer } from "mobx-react-lite";
 import { Context } from "../../..";
 import { configure } from "mobx";
+import Tags from "./Tags";
+import Tasks from "./Tasks";
+import Graph from "./Graph";
 
 const TaskPage = observer(() => {
   configure({
@@ -88,74 +90,11 @@ const TaskPage = observer(() => {
             ))}
           </div>
         </div>
-        <div className="tags">
-          <div className="selected_type">
-            <div className="image">
-              <img src={tasksStore.selectedType} alt="/s" className="icon" />
-            </div>
-          </div>
-          <div className="wrapper">
-            {tasksStore.tags.map(({selected, name}, index) => (
-              <div
-                key={index}
-                className={`tag ${selected && "selected"}`}
-              >
-                {name}
-                <div className="xmark"></div>
-              </div>
-            ))}
-            <div
-              onClick={() =>
-                tasksStore.tags.push({ selected: false, name: "Lol" })
-              }
-              className="add_tag"
-            >
-              Add tag
-            </div>
-          </div>
-        </div>
+        <Tags />
       </div>
       <div className="section__middle">
-        <div className="tasks__wrapper">
-          {tasksStore.tasks.map(({done, task}, index) => (
-            <div key={index} className="item">
-              <div
-                onClick={() => toggleTask(index)}
-                className={`round ${done ? "checked" : null}`}
-              >
-                <input type="checkbox" id="checkbox" />
-                <label className="checkbox"></label>
-              </div>
-              <div className={`task ${done ? "checked" : null}`}>
-                <div className="text">{task}</div>
-                <img src={menu} alt="" className="icon" />
-              </div>
-            </div>
-          ))}
-
-          <div
-            onClick={() => {
-              // tasksStore.tasks.push({
-              //   task: "Help with Sam's project",
-              //   done: false,
-              //   user: "sam",
-              // });
-              addTask(textValue);
-            }}
-            className="add_task"
-          >
-            <img src={plus} alt="" className="icon" />
-            <div className="text">Add subtask</div>
-          </div>
-          <form>
-            <textarea
-              className="text"
-              placeholder="Type here..."
-              value={textValue}
-              onChange={(e) => setTextValue(e.target.value)}
-            ></textarea>
-          </form>
-        </div>
+        <Tasks />
+        <Graph />
       </div>
       <div className="section__right"></div>
     </div>

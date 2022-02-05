@@ -7,12 +7,15 @@ import message from "../static/message.png";
 export default class TasksStore {
   constructor() {
     this._tags = [
-      { selected: true, name: "Design" },
-      { selected: false, name: "Home" },
-      { selected: false, name: "Meet" },
-      { selected: false, name: "P1" },
-      { selected: false, name: "Fork" },
-      { selected: false, name: "Fork" },
+      { selected: true, name: "Design", type: calendar },
+      { selected: true, name: "Home", type: calendar },
+      { selected: false, name: "Meet", type: bell },
+      { selected: false, name: "P1", type: bell },
+      { selected: false, name: "P2", type: calendar },
+      { selected: true, name: "P3", type: message },
+      { selected: false, name: "P1 Low", type: calendar },
+      { selected: false, name: "Fork", type: calendar },
+      { selected: true, name: "Work", type: calendar },
     ];
 
     this._types = [
@@ -28,6 +31,7 @@ export default class TasksStore {
       {task: "Fix some UI issues", done: true, user: "sam"},
       {task: "Feed your self :)", done: false, user: "sam"},
     ];
+    
 
     this._selectedType = calendar;
 

@@ -231,7 +231,7 @@ $almost-white-color: #c4e0f8;
                 margin-bottom: 15px;
             }
 
-            .tag {
+            .tag_wrap {
                 border-radius: $border-radius;
                 padding: 4px 12px;
                 color: white;
@@ -241,6 +241,7 @@ $almost-white-color: #c4e0f8;
                 flex-direction: row;
                 // opacity: 0.5;
 
+                
                 .xmark {
                     // border: 2px solid $blue-color;
                     border-radius: 50%;
@@ -252,6 +253,7 @@ $almost-white-color: #c4e0f8;
                     top: .07rem;
                     transition: all 0.5s;
                     background-color: gray;
+                    z-index: 10;
                 }
 
                 .xmark:after {
@@ -267,6 +269,7 @@ $almost-white-color: #c4e0f8;
                     top: 4px;
                     transform: rotate(-45deg);
                     width: 12px;
+                    z-index: 10;
                 }
 
                 .xmark:before {
@@ -282,8 +285,8 @@ $almost-white-color: #c4e0f8;
                     top: 4px;
                     transform: rotate(-315deg);
                     width: 12px;
+                    z-index: 10;
                 }
-
             }
 
             .selected {
