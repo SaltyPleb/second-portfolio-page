@@ -98,9 +98,10 @@ const TaskPage = observer(() => {
             {tasksStore.tags.map(({selected, name}, index) => (
               <div
                 key={index}
-                className={`tag ${selected ? "selected" : null}`}
+                className={`tag ${selected && "selected"}`}
               >
                 {name}
+                <div className="xmark"></div>
               </div>
             ))}
             <div

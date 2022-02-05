@@ -12,6 +12,7 @@ $light-pink-color: #d0506d;
 $almost-black-color: #222128;
 $light-blue-color: #62f3f7;
 $light-green-color: #23bfc0;
+$almost-white-color: #c4e0f8;
 
 @mixin item-hover-pop {
     transition: all 0.2s;
@@ -233,15 +234,68 @@ $light-green-color: #23bfc0;
             .tag {
                 border-radius: $border-radius;
                 padding: 4px 12px;
-                color: $blue-color;
-                background-color: rgba(30, 48, 60, 1);
+                color: white;
+                // background-color: rgba(30, 48, 60, 1);
+                background-color: #3d4750;
+                display: flex;
+                flex-direction: row;
                 // opacity: 0.5;
+
+                .xmark {
+                    // border: 2px solid $blue-color;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    height: 17px;
+                    width: 17px;
+                    left: 7px;
+                    position: relative;
+                    top: .07rem;
+                    transition: all 0.5s;
+                    background-color: gray;
+                }
+
+                .xmark:after {
+                    border: 2px solid #3d4750;
+                    border-top: none;
+                    border-right: none;
+                    border-left: none;
+                    content: "";
+                    height: 5px;
+                    left: 1px;
+                    opacity: 1;
+                    position: absolute;
+                    top: 4px;
+                    transform: rotate(-45deg);
+                    width: 12px;
+                }
+
+                .xmark:before {
+                    border: 2px solid #3d4750;
+                    border-top: none;
+                    border-right: none;
+                    border-left: none;
+                    content: "";
+                    height: 5px;
+                    left: 4px;
+                    opacity: 1;
+                    position: absolute;
+                    top: 4px;
+                    transform: rotate(-315deg);
+                    width: 12px;
+                }
+
             }
 
             .selected {
-                background-color: $blue-color;
-                color: white !important;
+                background-color: $almost-white-color;
+                color: #087efa !important;
                 opacity: 1;
+                .xmark{
+                    background-color: #087efa;
+                }
+                .xmark:after, .xmark:before {
+                    border-color:white;
+                }
             }
 
             .add_tag {
