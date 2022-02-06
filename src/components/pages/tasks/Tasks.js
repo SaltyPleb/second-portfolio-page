@@ -1,9 +1,10 @@
+import { observer } from "mobx-react-lite";
 import React, { useContext, useEffect, useState } from "react";
 import { Context } from "../../..";
 import menu from "../../../static/menu.png";
 import plus from "../../../static/plus.png";
 
-const Tasks = () => {
+const Tasks = observer(() => {
   const { tasksStore } = useContext(Context);
 
   const [tasksState, setTasksState] = useState(tasksStore.tasks);
@@ -75,6 +76,6 @@ const Tasks = () => {
       </form>
     </div>
   );
-};
+});
 
 export default Tasks;

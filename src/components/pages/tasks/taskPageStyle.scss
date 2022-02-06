@@ -1,3 +1,5 @@
+@import "GraphStyle";
+
 $border-radius: .845rem;
 $green-color: #87fb90;
 $red-color: #e86257;
@@ -241,7 +243,7 @@ $almost-white-color: #c4e0f8;
                 flex-direction: row;
                 // opacity: 0.5;
 
-                
+
                 .xmark {
                     // border: 2px solid $blue-color;
                     border-radius: 50%;
@@ -293,11 +295,14 @@ $almost-white-color: #c4e0f8;
                 background-color: $almost-white-color;
                 color: #087efa !important;
                 opacity: 1;
-                .xmark{
+
+                .xmark {
                     background-color: #087efa;
                 }
-                .xmark:after, .xmark:before {
-                    border-color:white;
+
+                .xmark:after,
+                .xmark:before {
+                    border-color: white;
                 }
             }
 
@@ -312,7 +317,7 @@ $almost-white-color: #c4e0f8;
 }
 
 .section__middle {
-    width: 400px;
+    width: clamp(350px, 30%, 500px);
     height: auto;
     display: flex;
     flex-direction: column;
@@ -341,8 +346,8 @@ $almost-white-color: #c4e0f8;
 
         .task {
             margin: 0 5px;
-            max-width: 330px;
             min-width: 330px;
+            width: clamp(430px, 50%, 430px);
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -376,6 +381,65 @@ $almost-white-color: #c4e0f8;
             font-weight: bold;
             font-size: 1.4em;
             color: gray;
+        }
+    }
+
+    .stats {
+        display: flex;
+        flex-direction: row;
+        background-color: $almost-black-color;
+        border-radius: $border-radius;
+        margin-top: $big-items-gap;
+    }
+
+    .graph_wrapper {
+        width: 220px;
+        height: 220px;
+        position: relative;
+    }
+
+    .stats_wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: $items-gap;
+        margin-left: 10px;
+
+        .line,
+        .line_wrap {
+            flex-direction: row;
+            display: flex;
+            align-items: center;
+            gap: $items-gap;
+
+            .color {
+                height: 10px;
+                width: 10px;
+                border-radius: 50%;
+                display: inline-block;
+
+                &.blue {
+                    background-color: $blue-color;
+                }
+
+                &.orange {
+                    background-color: $orange-color;
+                }
+
+                &.l-blue {
+                    background-color: $light-blue-color;
+                }
+            }
+
+            .item {
+                color: white;
+                min-width: 100px;
+            }
+
+            .percentage {
+                color: gray;
+            }
         }
     }
 
@@ -431,4 +495,25 @@ $almost-white-color: #c4e0f8;
         color: gray;
         text-decoration: line-through gray;
     }
+}
+
+@media only screen and (max-width: 980px) {
+
+    body,
+    html {
+        overflow: visible;
+    }
+
+    .task_page_container {
+        flex-direction: column;
+        height: auto;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tasks__wrapper {
+        margin-top: $big-items-gap;
+    }
+
 }

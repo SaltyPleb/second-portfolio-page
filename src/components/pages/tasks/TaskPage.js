@@ -23,33 +23,6 @@ const TaskPage = observer(() => {
     { bgcolor: "lblue", tasks: 53, name: "Trips" },
   ];
 
-  const [tasksState, setTasksState] = useState(tasksStore.tasks);
-
-  const [textValue, setTextValue] = useState("");
-
-  useEffect(() => {
-    tasksStore.setTasks(tasksState);
-    // console.log(tasksStore.tasks);
-  }, [tasksState]);
-
-  const addTask = (text) => {
-    if(!text) return
-    setTasksState([...tasksState, { task: text, done: false, user: "sam" }]);
-    setTextValue("");
-  };
-
-  const toggleTask = (index) => {
-    const newTasks = [...tasksState];
-    newTasks[index].done = !newTasks[index].done;
-    setTasksState(newTasks);
-  };
-
-  const removeTask = (index) => {
-    const newTasks = [...tasksState];
-    newTasks.splice(index, 1);
-    setTasksState(newTasks);
-  };
-
   return (
     <div className="task_page_container">
       <div className="section__left">
