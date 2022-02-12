@@ -1,4 +1,5 @@
 @import "GraphStyle";
+@import "Reminders";
 
 $border-radius: .845rem;
 $green-color: #87fb90;
@@ -317,7 +318,7 @@ $almost-white-color: #c4e0f8;
 }
 
 .section__middle {
-    width: clamp(350px, 30%, 500px);
+    width: clamp(350px, 30%, 420px);
     height: auto;
     display: flex;
     flex-direction: column;
@@ -393,8 +394,8 @@ $almost-white-color: #c4e0f8;
     }
 
     .graph_wrapper {
-        width: 220px;
-        height: 220px;
+        width: 230px;
+        height: 230px;
         position: relative;
     }
 
@@ -403,8 +404,8 @@ $almost-white-color: #c4e0f8;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        gap: $items-gap;
-        margin-left: 10px;
+        gap: calc($items-gap + 10px);
+        margin-left: 8px;
 
         .line,
         .line_wrap {
@@ -512,8 +513,15 @@ $almost-white-color: #c4e0f8;
         align-items: center;
     }
 
-    .tasks__wrapper {
+    .reminders {
         margin-top: $big-items-gap;
     }
 
+    .pie-wrapper, .stats_wrap {
+        margin-left: 5px;
+    }
+
+    .stats_wrap .line .item, .section__middle .stats_wrap .line_wrap .item {
+        min-width: 70px;
+    }
 }

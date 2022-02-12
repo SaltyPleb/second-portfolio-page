@@ -10,6 +10,7 @@ import { configure } from "mobx";
 import Tags from "./Tags";
 import Tasks from "./Tasks";
 import Graph from "./Graph";
+import Reminders from "./Reminders";
 
 const TaskPage = observer(() => {
   configure({
@@ -66,6 +67,7 @@ const TaskPage = observer(() => {
         <Tags />
       </div>
       <div className="section__middle">
+        <Reminders />
         <Tasks />
         <Graph />
       </div>

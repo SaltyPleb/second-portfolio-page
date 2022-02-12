@@ -38,21 +38,21 @@ const Graph = () => {
             <div className="color blue"></div>
             <div className="item">All tasks</div>
           </div>
-          <div className="percentage">72 %</div>
+          <div className="percentage">72%</div>
         </div>
         <div className="line">
           <div className="line_wrap">
             <div className="color orange"></div>
             <div className="item">Documents</div>
           </div>
-          <div className="percentage">30 %</div>
+          <div className="percentage">30%</div>
         </div>
         <div className="line">
           <div className="line_wrap">
             <div className="color l-blue"></div>
             <div className="item">Meetings</div>
           </div>
-          <div className="percentage">60 %</div>
+          <div className="percentage">60%</div>
         </div>
       </div>
     </div>

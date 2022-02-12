@@ -71,7 +71,7 @@ $almost-black-color: #24232a;
 .pie-wrapper {
   @include size($default-size, $default-size);
   float: left;
-  margin: 15px;
+  margin: 20px;
   position: relative;
   
   &:nth-child(3n + 1) {
