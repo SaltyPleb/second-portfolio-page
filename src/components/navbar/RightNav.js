@@ -3,9 +3,11 @@ import { Context } from "../..";
 import layers from "../../static/layers.png";
 import bg1 from "../../static/bg1.jpg";
 import bg2 from "../../static/bg2.jpg";
+import bg3 from "../../static/bg5.jpg";
+import bg4 from "../../static/bg6.jpg";
 
 const RightNav = () => {
-  const backgroundImages = [bg1, bg2];
+  const backgroundImages = [bg1, bg2, bg3, bg4];
 
   const { backgroundImage } = useContext(Context);
 
