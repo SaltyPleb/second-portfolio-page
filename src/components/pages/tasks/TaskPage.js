@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import "./taskPageStyle.scss";
+import "./taskPage.scss";
 import pen from "../../../static/pen.png";
 import plus from "../../../static/plus.png";
 import redstar from "../../../static/redstar.png";
@@ -11,6 +11,7 @@ import Tags from "./Tags";
 import Tasks from "./Tasks";
 import Graph from "./Graph";
 import Reminders from "./Reminders";
+import Calendar from "./Calendar";
 
 const TaskPage = observer(() => {
   configure({
@@ -71,7 +72,9 @@ const TaskPage = observer(() => {
         <Tasks />
         <Graph />
       </div>
-      <div className="section__right"></div>
+      <div className="section__right">
+        <Calendar />
+      </div>
     </div>
   );
 });

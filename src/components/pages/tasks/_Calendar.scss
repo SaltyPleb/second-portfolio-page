@@ -1,0 +1,190 @@
+$border-radius: .845rem;
+$not-black-color: #3d3e49;
+$items-gap: .80rem;
+$big-items-gap: calc($items-gap + 17px);
+$orange-color: #fd7347;
+$blue-color: #2f67dd;
+$light-pink-color: #d0506d;
+$almost-black-color: #222128;
+$light-blue-color: #62f3f7;
+$light-pink-color: #d0506d;
+$dark-gray-color: #282a30;
+
+
+.calendar__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: $big-items-gap;
+
+    .calendar {
+        background-color: $almost-black-color;
+        border-radius: $border-radius;
+        width: clamp(350px, 50%, 350px);
+        padding: 25px 22px;
+        // overflow: hidden;
+
+        .top__dates {
+            display: flex;
+            flex-direction: row;
+            gap: calc($items-gap + 6px);
+
+            .date {
+                border-radius: calc($border-radius + 5px);
+                background-color: $dark-gray-color;
+                padding: .7rem .1rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 12px;
+                width: 50px;
+                cursor: pointer;
+
+                &.today {
+                    background-color: $blue-color;
+
+                    .week-day {
+                        color: white;
+                    }
+                }
+
+                .day {
+                    color: white;
+                    font-weight: bold;
+                }
+
+                .week-day {
+                    color: gray;
+                }
+            }
+        }
+
+
+        .time_schedule {
+            margin-top: 2rem;
+
+            .tasks-time {
+
+                position: relative;
+
+                .hours {
+
+                    .hour {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        padding-bottom: 4rem;
+
+                        &:last-child {
+                            padding-bottom: 1rem;
+                        }
+                    }
+
+                    .line {
+                        position: absolute;
+                        width: 94.6%; 
+                        // refactor this later
+                        margin: 20px 0;
+                        height: 2.5px;
+                        padding: 0;
+                        border: none;
+                        background: linear-gradient(45deg, #212025, #38373b);
+                        left: 40px;
+                    }
+
+                    &>div {
+                        font-size: smaller;
+                        text-transform: lowercase;
+                        color: gray;
+                    }
+                }
+
+                .t-wrap {
+                    position: absolute;
+                    top: calc(15px + 79px);
+                    left: 4.5rem;
+                    border-radius: .4rem $border-radius $border-radius .5rem;
+                    background-color: #292a33;
+                    padding: 10px 10px 15px 25px;
+                    min-width: 290px;
+                    height: 118px;
+                    overflow: hidden;
+                    cursor: pointer;
+                    // one block for time = 59px      one full block in page = 79 px
+                    .task {
+                        &>div {
+                            padding: 4px;
+                        }
+
+                        &__type {
+                            color: $orange-color;
+                        }
+
+                        &__name {
+                            color: white;
+                            font-weight: bold;
+                        }
+
+                        &__time {
+                            font-size: smaller;
+                            color: gray;
+                            text-transform: lowercase;
+                        }
+                    }
+
+                    .line {
+                        position: absolute;
+                        width: 1rem;
+                        height: 120%;
+                        top: -5px;
+                        left: -7px;
+                        background-color: $orange-color;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .reminder {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        background-color: $almost-black-color;
+        border-radius: $border-radius;
+        width: clamp(350px, 50%, 300px);
+        padding: 14px 22px;
+
+        .time_end__ci {
+            border: 2px solid $orange-color;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .text {
+            margin-left: 2.5rem;
+
+            .date {
+                font-size: smaller;
+                color: $light-pink-color;
+                font-weight: bold;
+            }
+
+            .task {
+                margin-bottom: .7rem;
+                color: white;
+                font-weight: bold;
+                min-width: 270px;
+            }
+        }
+
+        &>svg {
+            position: absolute;
+            height: 20px;
+            fill: gray;
+            right: 15px;
+        }
+    }
+}

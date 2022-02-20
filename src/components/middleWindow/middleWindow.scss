@@ -69,9 +69,10 @@ $items-gap: .75rem;
         border-radius: $border-radius;
         margin: $items-gap;
         flex-direction: column;
+        height: 472.5px;
 
         .btn {
-            padding: 28.5px;
+            padding: 28px;
             cursor: pointer;
             border-radius: 150px;
             &:hover {
@@ -96,6 +97,7 @@ $items-gap: .75rem;
         border-radius: $border-radius;
         @include flex-center();
         align-self: center;
+        height: 70px;
 
         .item {
             margin: 17px;
@@ -142,7 +144,7 @@ $items-gap: .75rem;
 
     .react-calendar {
         width: 100%;
-        height: calc(706px - 387px - $border-radius);
+        height: calc(706px - 387px - 0.745rem);
         background-color: $not-blue-color;
         margin-top: $items-gap;
         border-radius: $border-radius;

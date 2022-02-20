@@ -1,5 +1,6 @@
 @import "GraphStyle";
 @import "Reminders";
+@import "Calendar";
 
 $border-radius: .845rem;
 $green-color: #87fb90;
@@ -30,16 +31,18 @@ $almost-white-color: #c4e0f8;
     margin-top: 50px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 3rem;
     // margin: auto;
     border-radius: 5rem;
     padding: 10px;
     // background-color: $not-black-color;
     // width: clamp(50%, 50%, 80%);
-    height: 90vh;
 }
 
 .section__left {
+    display: flex;
+    flex-direction: column;
     width: clamp(300px, 50%, 320px);
 
     .groups {
@@ -359,6 +362,10 @@ $almost-white-color: #c4e0f8;
                 max-width: 300px;
                 overflow: hidden;
             }
+
+            &>img {
+                cursor: no-drop;
+            }
         }
 
         .add_task {
@@ -446,6 +453,12 @@ $almost-white-color: #c4e0f8;
 
 }
 
+.section__right {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
 .round {
     position: relative;
 
@@ -517,11 +530,13 @@ $almost-white-color: #c4e0f8;
         margin-top: $big-items-gap;
     }
 
-    .pie-wrapper, .stats_wrap {
+    .pie-wrapper,
+    .stats_wrap {
         margin-left: 5px;
     }
 
-    .stats_wrap .line .item, .section__middle .stats_wrap .line_wrap .item {
+    .stats_wrap .line .item,
+    .section__middle .stats_wrap .line_wrap .item {
         min-width: 70px;
     }
 }
