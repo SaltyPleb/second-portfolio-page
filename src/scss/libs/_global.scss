@@ -1,0 +1,71 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:700);
+
+
+@mixin item-hover-pop {
+    transition: all 0.2s;
+
+    &:hover {
+        box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+        transform: scale(1.01);
+    }
+}
+
+@mixin size($width, $height) {
+    height: $height;
+    width: $width;
+    box-sizing: border-box;
+}
+
+@mixin draw-progress($progress, $color) {
+    .pie {
+        .half-circle {
+            border-color: $color;
+        }
+
+        .left-side {
+            transform: rotate($progress * 3.6deg);
+        }
+
+        @if $progress <=50 {
+            .right-side {
+                display: none;
+            }
+        }
+
+        @else {
+            clip: rect(auto, auto, auto, auto);
+
+            .right-side {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
+
+@mixin flex-center ($direction: default) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+@mixin progress-fill($progress-value: 0%) {
+    @keyframes load {
+        0% {
+            width: 0;
+        }
+
+        100% {
+            width: $progress-value;
+        }
+    }
+}
+
+@mixin item-hover-pop {
+    transition: all 0.2s;
+
+    &:hover {
+        box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+        transform: scale(1.01);
+    }
+}

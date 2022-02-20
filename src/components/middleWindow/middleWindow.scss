@@ -1,30 +1,4 @@
-$border-radius: .645rem;
-$green-color: #87fb90;
-$red-color: #e86257;
-$not-blue-color: #2a2a34;
-$pink-color: #b896f4;
-$items-gap: .75rem;
-
-
-
-@mixin flex-center ($direction: default) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: $direction;
-}
-
-@mixin progress-fill($progress-value: 0%) {
-    @keyframes load {
-        0% {
-            width: 0;
-        }
-
-        100% {
-            width: $progress-value;
-        }
-    }
-}
+@import "../../scss/libs/vars";
 
 .middle_screen {
     position: absolute;

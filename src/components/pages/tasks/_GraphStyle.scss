@@ -1,45 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:700);
-
-$bg-color: #34495e;
-$default-size: 1em;
-$label-font-size: $default-size / 4;
-$label-font-size-redo: $default-size * 4;
-$progress-width: 10px;
-
-$orange-color: #fd7347;
-$blue-color: #2b56b5;
-$light-blue-color: #62f3f7;
-$almost-black-color: #24232a;
-
-@mixin size($width, $height) {
-  height: $height;
-  width: $width;
-  box-sizing: border-box;
-}
-
-@mixin draw-progress($progress, $color) {
-  .pie {
-    .half-circle {
-      border-color: $color;
-    }
-
-    .left-side {
-      transform: rotate($progress * 3.6deg);
-    }
-
-    @if $progress <= 50 {
-      .right-side {
-        display: none;
-      }
-    } @else {
-      clip: rect(auto, auto, auto, auto);
-
-      .right-side {
-        transform: rotate(180deg);
-      }
-    }
-  }
-}
+@import "../../../scss/libs/vars";
 
 .set-size {
   font-size: 12em;
