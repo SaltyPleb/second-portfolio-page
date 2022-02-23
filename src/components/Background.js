@@ -3,15 +3,19 @@ import React, { useContext } from "react";
 import { Context } from "..";
 
 const Background = observer(() => {
-  const { backgroundImage } = useContext(Context)
+  const { backgroundImage } = useContext(Context);
 
   return (
-      <div className="background">
-        <div
-          className={`main_backgroud ${backgroundImage.bluredBackground ? "blured_backgroud" : ""}`}
-          style={{ backgroundImage: `url(${backgroundImage.backgroundImage})` }}
-        ></div>
+    <div className="background">
+      <div
+        className={`main_background ${
+          backgroundImage.bluredBackground ? "blured_background" : ""
+        }`}
+        style={{ backgroundImage: `url(${backgroundImage.backgroundImage})` }}
+      >
+        <div className="blur"></div>
       </div>
+    </div>
   );
 });
 

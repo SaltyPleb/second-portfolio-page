@@ -4,6 +4,7 @@ import Background from "./components/Background";
 import Main from "./Main";
 import BackgroundStore from "./store/BackgroundStore.js";
 import TasksStore from "./store/TasksStore.js";
+import "./scss/style.scss"
 
 export const Context = createContext(null);
 

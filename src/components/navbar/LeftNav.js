@@ -24,18 +24,23 @@ const LeftNav = () => {
       <div className="other_btns">
         <a className="btn-primary" href="https://github.com/SaltyPleb/second-portfolio-page" target="_blank" rel="noopener noreferrer">
           <img className="icon" src={math} alt="" />
+          <div className="description" >Code</div>
         </a>
-        <div className="btn-primary">
+        <div className="btn-primary disabled">
           <img className="icon" src={settings} alt="" />
+          <div className="description" >Settings</div>
         </div>
-        <div className="btn-primary">
+        <div className="btn-primary disabled">
           <img className="icon" src={graph} alt="" />
+          <div className="description" >Metrics</div>
         </div>
         <Link to={MONGO_TASK_PAGE} className="btn-primary">
           <img className="icon" src={docs} alt="" />
+          <div className="description" >Tasks</div>
         </Link>
-        <div className="btn-primary">
+        <div className="btn-primary disabled">
           <img className="icon" src={chat} alt="" />
+          <div className="description" >Chat</div>
         </div>
       </div>
 

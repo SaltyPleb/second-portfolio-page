@@ -1,4 +1,3 @@
-import "./style/style.css";
 import Navbar from "./components/navbar/Navbar";
 import { Context } from ".";
 import { useContext } from "react";

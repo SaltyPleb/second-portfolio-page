@@ -1,0 +1,45 @@
+@import "../scss/libs/vars";
+
+@import "NavBar";
+// @import "../components/pages/tasks/taskPage.scss";
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.main_background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -9999;
+    transition: .95s;
+}
+
+.blured_background {
+    //   filter: blur(2px);
+    //   -webkit-filter: blur(2px); 
+    .blur {
+        transition: all 1s ease;
+        height: 100vh;
+        width: 100vw;
+        background-color: #ffffff10;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    /* .main_backgroud {
+      left: 50%;
+      margin-left: -512px;
+    } */
+}
