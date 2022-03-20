@@ -1,6 +1,7 @@
 @import "../scss/libs/vars";
 
 @import "NavBar";
+@import "../components/player/Player";
 // @import "../components/pages/tasks/taskPage.scss";
 
 body,
@@ -21,6 +22,7 @@ html {
     min-height: 100%;
     z-index: -9999;
     transition: .95s;
+    background-color: black;
 }
 
 .blured_background {
@@ -30,9 +32,9 @@ html {
         transition: all 1s ease;
         height: 100vh;
         width: 100vw;
-        background-color: #ffffff10;
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
+        background-color: #00000010;
+        // backdrop-filter: blur(12px);
+        // -webkit-backdrop-filter: blur(12px);
 
     }
 }

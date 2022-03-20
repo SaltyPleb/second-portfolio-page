@@ -10,6 +10,7 @@ import spotify from "../../static/spotify2.png";
 import { Context } from "../..";
 import { Link } from "react-router-dom";
 import {HOME_PAGE, MONGO_TASK_PAGE}  from "../../utils/consts"
+import Player from "../player/Player";
 
 const LeftNav = () => {
 
@@ -53,6 +54,7 @@ const LeftNav = () => {
           <img className="icon" src={spotify} alt="" />
         </div>
       </div>
+          <Player/>
     </div>
   );
 };

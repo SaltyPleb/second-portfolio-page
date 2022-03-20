@@ -1,0 +1,19 @@
+.player-sp {
+    position: absolute;
+    top: 50px;
+    left: 15%;
+    background-color: $almost-white;
+    border-radius: $border-radius;
+    padding: $items-gap;
+    .player {
+        &__btns {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+                &>svg{
+                    padding: .5rem;
+                }
+        
+        }
+    }
+}
