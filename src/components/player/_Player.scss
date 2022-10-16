@@ -52,7 +52,9 @@
                 }
 
                 &:hover {
-                    color: #532ab9;
+                    svg{
+                        fill: #532ab9;
+                    }
     
                     &::before {
                         opacity: 1;
@@ -79,10 +81,13 @@
 
             // margin-left: 30%;
             &>svg {
+                fill: #532ab9;
                 padding: .5rem;
                 position: relative;
                 z-index: 2;
                 color: #532ab9 !important;
+                transition: all 0.3s ease-in-out;
+                    transition: all 0.4s cubic-bezier(0.35, 0.57, 0.13, 0.88);
             }
 
         }
